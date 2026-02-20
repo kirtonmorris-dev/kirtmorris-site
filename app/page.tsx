@@ -171,23 +171,23 @@ function Hero() {
           <div style={{
             width: "280px",
             height: "340px",
-            background: `linear-gradient(135deg, ${B.charcoal} 0%, ${B.slate} 100%)`,
-            border: `1px solid ${B.slate}`,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "12px",
             position: "relative",
+            overflow: "hidden",
           }}>
-            <div style={{ width: "60px", height: "60px", borderRadius: "50%", border: `2px solid ${B.gold}44`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontSize: "24px", color: B.gold, opacity: 0.6 }}>KM</span>
-            </div>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", color: B.steel }}>Headshot Placeholder</p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "10px", color: `${B.steel}88`, maxWidth: "200px", textAlign: "center" }}>Replace with professional editorial portrait</p>
+            <img
+              src="/headshot.jpg"
+              alt="Kirt Morris, Enterprise Performance Strategist"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center top",
+                display: "block",
+              }}
+            />
             {/* Corner accents */}
-            <div style={{ position: "absolute", top: "-1px", left: "-1px", width: "24px", height: "24px", borderTop: `2px solid ${B.gold}`, borderLeft: `2px solid ${B.gold}` }} />
-            <div style={{ position: "absolute", bottom: "-1px", right: "-1px", width: "24px", height: "24px", borderBottom: `2px solid ${B.gold}`, borderRight: `2px solid ${B.gold}` }} />
+            <div style={{ position: "absolute", top: "0", left: "0", width: "24px", height: "24px", borderTop: `2px solid ${B.gold}`, borderLeft: `2px solid ${B.gold}` }} />
+            <div style={{ position: "absolute", bottom: "0", right: "0", width: "24px", height: "24px", borderBottom: `2px solid ${B.gold}`, borderRight: `2px solid ${B.gold}` }} />
           </div>
         </div>
       </div>
