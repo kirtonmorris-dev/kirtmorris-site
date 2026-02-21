@@ -101,17 +101,18 @@ function Navigation({ active, onNav }) {
   useEffect(() => { const h = () => setScrolled(window.scrollY > 60); window.addEventListener("scroll", h); return () => window.removeEventListener("scroll", h); }, []);
   useEffect(() => {
     if (open) {
+      const sy = window.scrollY;
       document.body.style.overflow = "hidden";
       document.body.style.position = "fixed";
       document.body.style.width = "100%";
-      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.top = `-${sy}px`;
     } else {
-      const scrollY = document.body.style.top;
+      const sy = document.body.style.top;
       document.body.style.overflow = "";
       document.body.style.position = "";
       document.body.style.width = "";
       document.body.style.top = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      if (sy) window.scrollTo(0, parseInt(sy) * -1);
     }
   }, [open]);
   const links = ["Home", "About", "Impact", "Expertise", "Case Study", "Thought Leadership", "Resume", "Governance", "Contact"];
@@ -124,12 +125,12 @@ function Navigation({ active, onNav }) {
           <button key={l} onClick={() => onNav(l)} style={{ background: "none", border: "none", color: active === l ? B.gold : B.silver, fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 400, letterSpacing: "0.13em", textTransform: "uppercase", cursor: "pointer", padding: "4px 0", borderBottom: active === l ? `1px solid ${B.gold}` : "1px solid transparent", transition: "all 0.3s ease" }}>{l}</button>
         ))}
       </div>
-      <button className="mbtn" onClick={() => setOpen(!open)} style={{ display: "none", background: "none", border: "none", color: B.ivory, fontSize: "24px", cursor: "pointer", position: "relative", zIndex: 9999 }}>{open ? "✕" : "☰"}</button>
+      <button className="mbtn" onClick={() => setOpen(true)} style={{ display: "none", background: "none", border: "none", color: B.ivory, fontSize: "24px", cursor: "pointer" }}>☰</button>
     </nav>
     {open && (
-      <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, width: "100vw", height: "100vh", backgroundColor: "#0D1117", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "28px", zIndex: 9998, overflow: "hidden" }}>
-        <button onClick={() => setOpen(false)} style={{ position: "absolute", top: "18px", right: "40px", background: "none", border: "none", color: B.ivory, fontSize: "28px", cursor: "pointer", zIndex: 9999 }}>✕</button>
-        {links.map(l => (<button key={l} onClick={() => { onNav(l); setOpen(false); }} style={{ background: "none", border: "none", color: B.ivory, fontFamily: "'Cormorant Garamond', serif", fontSize: "26px", fontWeight: 300, letterSpacing: "0.08em", cursor: "pointer", padding: "8px 0" }}>{l}</button>))}
+      <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, width: "100vw", height: "100vh", backgroundColor: "#0D1117", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "28px", zIndex: 10000 }}>
+        <button onClick={() => setOpen(false)} style={{ position: "absolute", top: "18px", right: "40px", background: "none", border: "none", color: B.ivory, fontSize: "28px", cursor: "pointer", padding: "10px" }}>✕</button>
+        {links.map(l => (<button key={l} onClick={() => { setOpen(false); setTimeout(() => onNav(l), 50); }} style={{ background: "none", border: "none", color: B.ivory, fontFamily: "'Cormorant Garamond', serif", fontSize: "26px", fontWeight: 300, letterSpacing: "0.08em", cursor: "pointer", padding: "12px 40px", WebkitTapHighlightColor: "rgba(197,151,91,0.2)" }}>{l}</button>))}
       </div>
     )}
     </>
