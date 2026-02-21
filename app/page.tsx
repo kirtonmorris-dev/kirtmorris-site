@@ -99,8 +99,24 @@ function Navigation({ active, onNav }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   useEffect(() => { const h = () => setScrolled(window.scrollY > 60); window.addEventListener("scroll", h); return () => window.removeEventListener("scroll", h); }, []);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${window.scrollY}px`;
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
+  }, [open]);
   const links = ["Home", "About", "Impact", "Expertise", "Case Study", "Thought Leadership", "Resume", "Governance", "Contact"];
   return (
+    <>
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, padding: scrolled ? "10px 40px" : "18px 40px", background: scrolled ? "rgba(13,17,23,0.96)" : "rgba(13,17,23,0.85)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderBottom: scrolled ? `1px solid ${B.slate}33` : "none", transition: "all 0.4s cubic-bezier(0.22,1,0.36,1)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
       <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "20px", fontWeight: 600, color: B.ivory, letterSpacing: "0.06em", cursor: "pointer" }} onClick={() => onNav("Home")}>KIRT MORRIS</div>
       <div className="dnav" style={{ display: "flex", gap: "28px", alignItems: "center" }}>
@@ -108,14 +124,15 @@ function Navigation({ active, onNav }) {
           <button key={l} onClick={() => onNav(l)} style={{ background: "none", border: "none", color: active === l ? B.gold : B.silver, fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 400, letterSpacing: "0.13em", textTransform: "uppercase", cursor: "pointer", padding: "4px 0", borderBottom: active === l ? `1px solid ${B.gold}` : "1px solid transparent", transition: "all 0.3s ease" }}>{l}</button>
         ))}
       </div>
-      <button className="mbtn" onClick={() => setOpen(!open)} style={{ display: "none", background: "none", border: "none", color: B.ivory, fontSize: "24px", cursor: "pointer", zIndex: 1002 }}>{open ? "✕" : "☰"}</button>
-      {open && (
-        <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, width: "100%", height: "100%", background: B.midnight, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "24px", zIndex: 1001 }}>
-          <button onClick={() => setOpen(false)} style={{ position: "absolute", top: "18px", right: "40px", background: "none", border: "none", color: B.ivory, fontSize: "28px", cursor: "pointer" }}>✕</button>
-          {links.map(l => (<button key={l} onClick={() => { onNav(l); setOpen(false); }} style={{ background: "none", border: "none", color: B.ivory, fontFamily: "'Cormorant Garamond', serif", fontSize: "26px", fontWeight: 300, letterSpacing: "0.08em", cursor: "pointer" }}>{l}</button>))}
-        </div>
-      )}
+      <button className="mbtn" onClick={() => setOpen(!open)} style={{ display: "none", background: "none", border: "none", color: B.ivory, fontSize: "24px", cursor: "pointer", position: "relative", zIndex: 9999 }}>{open ? "✕" : "☰"}</button>
     </nav>
+    {open && (
+      <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, width: "100vw", height: "100vh", backgroundColor: "#0D1117", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: "28px", zIndex: 9998, overflow: "hidden" }}>
+        <button onClick={() => setOpen(false)} style={{ position: "absolute", top: "18px", right: "40px", background: "none", border: "none", color: B.ivory, fontSize: "28px", cursor: "pointer", zIndex: 9999 }}>✕</button>
+        {links.map(l => (<button key={l} onClick={() => { onNav(l); setOpen(false); }} style={{ background: "none", border: "none", color: B.ivory, fontFamily: "'Cormorant Garamond', serif", fontSize: "26px", fontWeight: 300, letterSpacing: "0.08em", cursor: "pointer", padding: "8px 0" }}>{l}</button>))}
+      </div>
+    )}
+    </>
   );
 }
 
