@@ -146,9 +146,9 @@ function Hero() {
 
   return (
     <section id="Home" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "120px 40px 80px", position: "relative", overflow: "hidden", background: `radial-gradient(ellipse at 25% 50%, ${B.charcoal} 0%, ${B.midnight} 70%)` }}>
-      <div style={{ position: "absolute", inset: 0, opacity: 0.025, background: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
+      <div style={{ position: "absolute", inset: 0, opacity: 0.025, pointerEvents: "none", background: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
 
-      <div style={{ maxWidth: "1100px", margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1fr 320px", gap: "60px", alignItems: "center" }} className="hero-grid">
+      <div style={{ maxWidth: "1100px", margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1fr 320px", gap: "60px", alignItems: "center", position: "relative", zIndex: 1 }} className="hero-grid">
         <div>
           {/* Flagship Identity */}
           <div style={{ width: on ? "50px" : "0px", height: "2px", background: B.gold, marginBottom: "28px", transition: t(0.4) }} />
@@ -229,7 +229,7 @@ function Hero() {
         </div>
       </div>
 
-      <div style={{ position: "absolute", bottom: "12px", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "4px", opacity: on ? 0.35 : 0, transition: `opacity 1s ease 2s` }}>
+      <div style={{ position: "absolute", bottom: "12px", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "4px", opacity: on ? 0.35 : 0, transition: `opacity 1s ease 2s`, pointerEvents: "none" }}>
         <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", color: B.steel }}>Scroll</span>
         <div style={{ width: "1px", height: "18px", background: `linear-gradient(to bottom, ${B.steel}, transparent)` }} />
       </div>
