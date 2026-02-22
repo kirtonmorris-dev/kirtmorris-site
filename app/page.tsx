@@ -153,8 +153,11 @@ function Hero() {
           {/* Flagship Identity */}
           <div style={{ width: on ? "50px" : "0px", height: "2px", background: B.gold, marginBottom: "28px", transition: t(0.4) }} />
 
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: B.gold, marginBottom: "20px", opacity: on ? 1 : 0, transition: t(0.6) }}>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: B.gold, marginBottom: "8px", opacity: on ? 1 : 0, transition: t(0.6) }}>
             Operator Turned Workforce Strategist
+          </p>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", letterSpacing: "0.08em", color: B.steel, marginBottom: "20px", opacity: on ? 1 : 0, transition: t(0.65) }}>
+            Talent Analytics · Workforce Strategy · Culture Transformation · Digital Delivery
           </p>
 
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(38px, 5.5vw, 68px)", fontWeight: 300, lineHeight: 1.08, color: B.ivory, marginBottom: "28px", opacity: on ? 1 : 0, transform: on ? "translateY(0)" : "translateY(20px)", transition: t(0.8) }}>
@@ -181,6 +184,22 @@ function Hero() {
                 <span style={{ color: B.gold, fontSize: "7px" }}>◆</span>{p}
               </div>
             ))}
+          </div>
+
+          {/* Hero CTAs */}
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "36px", opacity: on ? 1 : 0, transition: `opacity 0.8s ease 1.5s` }}>
+            <a href="/Kirt_Morris_Executive_Bio.pdf" target="_blank" rel="noopener noreferrer"
+              style={{ display: "inline-block", fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: B.midnight, background: B.gold, padding: "12px 28px", textDecoration: "none", transition: "all 0.3s ease" }}
+              onMouseEnter={ev => { ev.currentTarget.style.background = B.ivory; }}
+              onMouseLeave={ev => { ev.currentTarget.style.background = B.gold; }}>
+              Download Resume
+            </a>
+            <a href="https://www.linkedin.com/in/kirtmorris/" target="_blank" rel="noopener noreferrer"
+              style={{ display: "inline-block", fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: B.silver, border: `1px solid ${B.silver}44`, padding: "12px 28px", textDecoration: "none", transition: "all 0.3s ease" }}
+              onMouseEnter={ev => { ev.currentTarget.style.color = B.gold; ev.currentTarget.style.borderColor = B.gold; }}
+              onMouseLeave={ev => { ev.currentTarget.style.color = B.silver; ev.currentTarget.style.borderColor = `${B.silver}44`; }}>
+              Connect on LinkedIn
+            </a>
           </div>
         </div>
 
@@ -210,9 +229,9 @@ function Hero() {
         </div>
       </div>
 
-      <div style={{ position: "absolute", bottom: "36px", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "6px", opacity: on ? 0.35 : 0, transition: `opacity 1s ease 2s` }}>
+      <div style={{ position: "absolute", bottom: "12px", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: "4px", opacity: on ? 0.35 : 0, transition: `opacity 1s ease 2s` }}>
         <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "10px", letterSpacing: "0.15em", textTransform: "uppercase", color: B.steel }}>Scroll</span>
-        <div style={{ width: "1px", height: "28px", background: `linear-gradient(to bottom, ${B.steel}, transparent)` }} />
+        <div style={{ width: "1px", height: "18px", background: `linear-gradient(to bottom, ${B.steel}, transparent)` }} />
       </div>
     </section>
   );
@@ -235,7 +254,7 @@ function About() {
           <FadeIn delay={200}>
             <div>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
-                Most people leaders come from HR. I came from the engine room. For 18 years, I managed complex technology programs for brands like Procter & Gamble, Canon, Under Armour, and Lowe's. I learned where decisions stall, where talent breaks, and where margin leaks hide in workforce data that nobody is reading.
+                Most people leaders come from HR. I came from the engine room. For 20 years, I managed complex technology programs for brands like Procter & Gamble, Canon, Under Armour, and Lowe's. I learned where decisions stall, where talent breaks, and where margin leaks hide in workforce data that nobody is reading.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
                 When I transitioned to lead Merkle's global culture function, I brought operational discipline with me. I built a center of excellence serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. But more importantly, I connected every talent initiative to a financial outcome: reduced attrition cost exposure, accelerated promotion velocity, expanded leadership bench strength, and measurable retention economics.
@@ -266,6 +285,33 @@ function About() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── TARGET ROLES ───────────────────────────────────────────────────────────
+
+function TargetRoles() {
+  const roles = [
+    "Head of People Analytics & Workforce Strategy",
+    "Chief Culture & Talent Strategy Officer",
+    "SVP, Talent Strategy & Workforce Analytics",
+    "Head of Business Intelligence",
+  ];
+  return (
+    <section style={{ padding: "56px 40px", background: B.midnight, borderTop: `1px solid ${B.slate}22`, borderBottom: `1px solid ${B.slate}22` }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", alignItems: "center", gap: "40px", flexWrap: "wrap" }} className="roles-row">
+        <FadeIn>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: B.gold, whiteSpace: "nowrap" }}>Target Roles</p>
+        </FadeIn>
+        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", flex: 1 }}>
+          {roles.map((r, i) => (
+            <FadeIn key={i} delay={100 + i * 60}>
+              <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", color: B.silver, padding: "8px 20px", border: `1px solid ${B.slate}44`, whiteSpace: "nowrap" }}>{r}</span>
+            </FadeIn>
+          ))}
         </div>
       </div>
     </section>
@@ -380,10 +426,10 @@ function CaseStudy() {
           ].map((step, i) => (
             <FadeIn key={i} delay={200 + i * 120}>
               <div style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: "0", background: step.color, borderBottom: `1px solid ${B.silver}22` }} className="case-row">
-                <div style={{ padding: "32px 24px", display: "flex", alignItems: "flex-start" }}>
+                <div style={{ padding: "32px 24px 8px 24px" }} className="case-label">
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: B.gold }}>{step.label}</p>
                 </div>
-                <div style={{ padding: "32px 24px 32px 0" }}>
+                <div style={{ padding: "32px 24px 32px 0" }} className="case-text">
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", lineHeight: 1.8, color: B.slate }}>{step.text}</p>
                 </div>
               </div>
@@ -643,16 +689,31 @@ function Contact() {
           </h2>
         </FadeIn>
         <FadeIn delay={100}>
-          <div style={{ display: "flex", gap: "40px", justifyContent: "center", flexWrap: "wrap", marginBottom: "16px" }}>
+          <div style={{ display: "flex", gap: "40px", justifyContent: "center", flexWrap: "wrap", marginBottom: "24px" }}>
             {[
               { label: "kirtonmorris@gmail.com", href: "mailto:kirtonmorris@gmail.com" },
               { label: "240.353.5992", href: "tel:240-353-5992" },
-              { label: "LinkedIn", href: "https://www.linkedin.com/in/kirtmorris/" },
             ].map((c, i) => (
-              <a key={i} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", color: B.silver, textDecoration: "none", transition: "color 0.2s", letterSpacing: "0.02em" }}
+              <a key={i} href={c.href} style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", color: B.silver, textDecoration: "none", transition: "color 0.2s", letterSpacing: "0.02em" }}
                 onMouseEnter={ev => (ev.currentTarget.style.color = B.gold)}
                 onMouseLeave={ev => (ev.currentTarget.style.color = B.silver)}>{c.label}</a>
             ))}
+          </div>
+        </FadeIn>
+        <FadeIn delay={150}>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap", marginBottom: "20px" }}>
+            <a href="https://www.linkedin.com/in/kirtmorris/" target="_blank" rel="noopener noreferrer"
+              style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: B.gold, padding: "10px 24px", border: `1px solid ${B.gold}44`, textDecoration: "none", transition: "all 0.3s ease" }}
+              onMouseEnter={ev => { ev.currentTarget.style.background = B.gold; ev.currentTarget.style.color = B.midnight; }}
+              onMouseLeave={ev => { ev.currentTarget.style.background = "transparent"; ev.currentTarget.style.color = B.gold; }}>
+              LinkedIn Profile
+            </a>
+            <a href="/Kirt_Morris_Executive_Bio.pdf" target="_blank" rel="noopener noreferrer"
+              style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: B.silver, padding: "10px 24px", border: `1px solid ${B.slate}44`, textDecoration: "none", transition: "all 0.3s ease" }}
+              onMouseEnter={ev => { ev.currentTarget.style.color = B.gold; ev.currentTarget.style.borderColor = B.gold; }}
+              onMouseLeave={ev => { ev.currentTarget.style.color = B.silver; ev.currentTarget.style.borderColor = `${B.slate}44`; }}>
+              Download Resume
+            </a>
           </div>
         </FadeIn>
         <FadeIn delay={200}>
@@ -703,6 +764,9 @@ export default function KirtMorrisSite() {
           .tdot{left:-4px!important}
           .headshot-col{display:flex;justify-content:center;order:-1}
           .case-row{grid-template-columns:1fr!important}
+          .case-row .case-label{padding:24px 24px 4px 24px!important}
+          .case-row .case-text{padding:0 24px 24px 24px!important}
+          .roles-row{flex-direction:column;align-items:flex-start!important;gap:20px!important}
           .pub-row{grid-template-columns:1fr!important;gap:8px!important}
         }
         @media(max-width:600px){
@@ -713,6 +777,7 @@ export default function KirtMorrisSite() {
       <Navigation active={active} onNav={nav} />
       <Hero />
       <About />
+      <TargetRoles />
       <Impact />
       <Expertise />
       <CaseStudy />
