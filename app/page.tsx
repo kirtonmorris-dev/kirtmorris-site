@@ -169,7 +169,7 @@ function Hero() {
           {/* 3-line executive summary */}
           <div style={{ borderLeft: `2px solid ${B.gold}44`, paddingLeft: "20px", marginBottom: "40px", opacity: on ? 1 : 0, transition: t(1.0) }}>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "16px", lineHeight: 1.75, color: B.silver }}>
-              Enterprise performance strategist with 25+ years in technology delivery and people strategy. I build talent systems that reduce attrition cost, accelerate promotion velocity, and protect margins. Fortune 1000 track record across $20MM+ in transformations.
+              Enterprise performance strategist with 25+ years in technology delivery and people strategy. I build talent systems that reduce attrition cost, accelerate promotion velocity, and protect margins. Fortune 1000 track record across $20MM+ in transformations. From $250M platform turnarounds at P&G to building enterprise talent systems from zero, I operate where technology delivery meets workforce performance.
             </p>
           </div>
 
@@ -257,7 +257,7 @@ function About() {
                 Most people leaders come from HR. I came from the engine room. For 20 years, I managed complex technology programs for brands like Procter & Gamble, Canon, Under Armour, and Lowe's. I learned where decisions stall, where talent breaks, and where margin leaks hide in workforce data that nobody is reading.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
-                When I transitioned to lead Merkle's global culture function, I brought operational discipline with me. I built a center of excellence serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. But more importantly, I connected every talent initiative to a financial outcome: reduced attrition cost exposure, accelerated promotion velocity, expanded leadership bench strength, and measurable retention economics.
+                When I transitioned to lead Merkle's global culture function, I brought operational discipline with me. I built a center of excellence serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. But more importantly, I connected every talent initiative to a financial outcome: reduced attrition cost exposure, accelerated promotion velocity, expanded leadership bench strength, and measurable retention economics. Now I'm bringing that same operational discipline to organizations ready to treat workforce strategy as a financial lever, not an HR initiative.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate }}>
                 My career proves a thesis that most organizations still haven't internalized: the best talent strategies are built by leaders who understand both the data and the humans behind it, and can translate both into language the CFO respects.
@@ -295,10 +295,10 @@ function About() {
 
 function TargetRoles() {
   const roles = [
+    "Head of Business Intelligence",
     "Head of People Analytics & Workforce Strategy",
     "Chief Culture & Talent Strategy Officer",
     "SVP, Talent Strategy & Workforce Analytics",
-    "Head of Business Intelligence",
   ];
   return (
     <section style={{ padding: "56px 40px", background: B.midnight, borderTop: `1px solid ${B.slate}22`, borderBottom: `1px solid ${B.slate}22` }}>
