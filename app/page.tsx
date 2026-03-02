@@ -263,7 +263,7 @@ function About() {
                 Every company I speak with is wrestling with the same question: how do we leverage the power of AI while retaining and developing the people who matter most? Most HR professionals lack the technical fluency to answer that question. Most technologists lack the people sensitivity. I bring both, along with quantitative frameworks that translate workforce investments into language the CFO respects and the CHRO can execute.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate }}>
-                My career proves a thesis that most organizations still haven't internalized: the best talent strategies are built by leaders who understand both the data and the humans behind it, and can translate both into language the CFO respects.
+                My career proves a thesis that most organizations still haven't internalized: the best talent strategies are built by leaders who understand both the data and the humans behind it, and can translate both into language the CEO respects.
               </p>
             </div>
           </FadeIn>
