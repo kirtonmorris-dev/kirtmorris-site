@@ -42,7 +42,7 @@ const EXPERTISE = [
   { title: "Culture Transformation at Scale", desc: "Building measurable culture programs from zero to center of excellence with defensible ROI tied directly to margin protection and talent retention.", icon: "◇" },
   { title: "Enterprise Digital Delivery", desc: "25+ years leading $20MM+ technology transformations for Fortune 1000 brands, delivering cost reduction, productivity improvement, and revenue growth.", icon: "▣" },
   { title: "Talent System Architecture", desc: "Designing fair, transparent talent systems that accelerate promotion velocity, reduce time-to-fill for critical roles, and connect people investments to financial outcomes.", icon: "△" },
-  { title: "Employee Value Proposition Design", desc: "Crafting EVP frameworks that reduce attrition cost exposure, strengthen employer brand positioning, and measurably improve offer acceptance rates.", icon: "○" },
+  { title: "AI Workforce Readiness", desc: "Helping organizations prepare their workforce for AI driven disruption by identifying which roles require human judgment, which tasks can be automated, and how to retool teams for maximum value creation while preserving institutional knowledge.", icon: "○" },
   { title: "Organizational Design & Restructuring", desc: "Aligning talent capabilities with strategic business objectives to protect margins, mitigate succession risk, and accelerate enterprise performance.", icon: "□" },
 ];
 
@@ -259,6 +259,9 @@ function About() {
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
                 When I transitioned to lead Merkle's global culture function, I brought operational discipline with me. I built a center of excellence serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. But more importantly, I connected every talent initiative to a financial outcome: reduced attrition cost exposure, accelerated promotion velocity, expanded leadership bench strength, and measurable retention economics. Now I'm bringing that same operational discipline to organizations ready to treat workforce strategy as a financial lever, not an HR initiative.
               </p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
+                Every company I speak with is wrestling with the same question: how do we leverage the power of AI while retaining and developing the people who matter most? Most HR professionals lack the technical fluency to answer that question. Most technologists lack the people sensitivity. I bring both, along with quantitative frameworks that translate workforce investments into language the CFO respects and the CHRO can execute.
+              </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate }}>
                 My career proves a thesis that most organizations still haven't internalized: the best talent strategies are built by leaders who understand both the data and the humans behind it, and can translate both into language the CFO respects.
               </p>
@@ -272,7 +275,7 @@ function About() {
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "11px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: B.gold, marginBottom: "16px" }}>Leadership Philosophy</p>
                 <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "21px", fontWeight: 400, lineHeight: 1.5, color: B.midnight, fontStyle: "italic", marginBottom: "16px" }}>"I'm renting my title, but I own my brand."</p>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", lineHeight: 1.7, color: B.slate }}>
-                  Three pillars: transparency, promise, and control. Trust is the default. Autonomy is granted. When workforce data reveals uncomfortable truths, I act on them.
+                  Four pillars: transparency, promise, control, and consensus. Trust is the default. Autonomy is granted. When workforce data reveals uncomfortable truths, I act on them, but I build alignment before I act.
                 </p>
               </div>
 
@@ -295,7 +298,7 @@ function About() {
 
 function TargetRoles() {
   const roles = [
-    "Head of Business Intelligence",
+    "SVP, Talent Strategy & AI Workforce Readiness",
     "Head of People Analytics & Workforce Strategy",
     "Chief Culture & Talent Strategy Officer",
     "SVP, Talent Strategy & Workforce Analytics",
@@ -421,7 +424,7 @@ function CaseStudy() {
           {[
             { label: "Before", color: `${B.slate}11`, text: "Merkle had no formal DEI function, no measurement framework, no dedicated budget, and no global coordination across 16,000+ employees in three regions. Talent representation was stagnant. Leadership bench strength was weak in diversity. There was no infrastructure to connect people strategy to business outcomes." },
             { label: "Problem", color: `${B.slate}08`, text: "The CEO needed a center of excellence that could operate at enterprise scale, produce measurable financial and talent outcomes, and withstand scrutiny from the CFO and external stakeholders. This was not a communications exercise. It was an operational build that required budget management, vendor selection, technology integration, cross-regional governance, and executive stakeholder alignment." },
-            { label: "Action", color: `${B.slate}11`, text: "I recruited a team of six professionals across three regions within 12 months and built the function from the ground up. I secured and managed a $12MM budget over five years, established 11 Employee Resource Groups with 1,300 champions, created systematic measurement frameworks using Workday and workforce analytics, launched the LIFT leadership program, formed Merkle's first Howard University partnership, and embedded inclusive hiring practices with the first Inclusive Hiring Manager." },
+            { label: "Action", color: `${B.slate}11`, text: "I recruited a team of six professionals across three regions within 12 months and built the function from the ground up. I secured and managed a $12MM budget over five years, established 11 Employee Resource Groups with 1,300 champions, created systematic measurement frameworks using Workday and workforce analytics that enabled quarterly reporting to the CEO and CFO on retention economics, promotion velocity, and talent pipeline ROI, launched the LIFT leadership program, formed Merkle's first Howard University partnership, and embedded inclusive hiring practices with the first Inclusive Hiring Manager." },
             { label: "Result", color: `${B.slate}08`, text: "50% increase in diverse talent pipeline. 4% rise in women executives. 7% growth in underrepresented talent. 35% boost in diverse recruitment via Howard University. Three internal promotions in six months through LIFT. Employee Pulse scores improved from 3.0 to 4.1. Five industry awards including Microsoft DEI Champion of the Year. Published thought leadership in Quartz, Digiday, and Afrotech. The function became a model referenced by Dentsu's global leadership." },
           ].map((step, i) => (
             <FadeIn key={i} delay={200 + i * 120}>
@@ -611,7 +614,7 @@ function Governance() {
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", fontWeight: 500, color: B.ivory }}>Mind for Mission</p>
               </div>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", color: B.silver, maxWidth: "400px" }}>
-                Advisory role applying enterprise technology strategy and organizational transformation expertise to mission driven organizations.
+                Advisory role helping mission driven organizations navigate AI adoption by identifying which work requires human judgment and which can be automated, ensuring technology serves the mission without displacing the people who deliver it.
               </p>
             </div>
           </div>
@@ -637,7 +640,7 @@ function ExecutiveCTA() {
         </FadeIn>
         <FadeIn delay={200}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.7, color: B.steel, marginBottom: "36px" }}>
-            I engage selectively with organizations where workforce strategy, talent systems, or culture transformation are treated as competitive levers. If that describes your challenge, I welcome the conversation.
+            I engage selectively with organizations where workforce strategy, talent systems, or culture transformation are treated as competitive levers, or where AI driven workforce transformation requires a leader who understands both the technology and the humans behind it. If that describes your challenge, I welcome the conversation.
           </p>
         </FadeIn>
         <FadeIn delay={300}>
