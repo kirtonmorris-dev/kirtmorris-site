@@ -157,7 +157,7 @@ function Hero() {
             Operator Turned Workforce Strategist
           </p>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", letterSpacing: "0.08em", color: B.steel, marginBottom: "20px", opacity: on ? 1 : 0, transition: t(0.65) }}>
-            Talent Analytics · Workforce Strategy · Culture Transformation · Digital Delivery
+            Talent Analytics · Workforce Strategy · Culture Transformation · AI Workforce Readiness
           </p>
 
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(38px, 5.5vw, 68px)", fontWeight: 300, lineHeight: 1.08, color: B.ivory, marginBottom: "28px", opacity: on ? 1 : 0, transform: on ? "translateY(0)" : "translateY(20px)", transition: t(0.8) }}>
@@ -169,7 +169,7 @@ function Hero() {
           {/* 3-line executive summary */}
           <div style={{ borderLeft: `2px solid ${B.gold}44`, paddingLeft: "20px", marginBottom: "40px", opacity: on ? 1 : 0, transition: t(1.0) }}>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "16px", lineHeight: 1.75, color: B.silver }}>
-              Enterprise performance strategist with 25+ years in technology delivery and people strategy. I build talent systems that reduce attrition cost, accelerate promotion velocity, and protect margins. Fortune 1000 track record across $20MM+ in transformations. From $250M platform turnarounds at P&G to building enterprise talent systems from zero, I operate where technology delivery meets workforce performance.
+              Enterprise performance strategist with 25+ years in technology delivery and people strategy. I build talent systems that reduce attrition cost, accelerate promotion velocity, and protect margins. Fortune 1000 track record across $20MM+ in transformations. From $250M platform turnarounds at P&G to building enterprise talent systems from zero, I operate where technology delivery meets workforce performance, helping organizations navigate AI disruption while protecting and optimizing human capital.
             </p>
           </div>
 
