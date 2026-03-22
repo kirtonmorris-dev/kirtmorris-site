@@ -30,8 +30,8 @@ const METRICS = [
 
 const METRICS_ROW2 = [
   { value: "$12MM", label: "Budget Stewarded Over 5 Years", context: "Global Talent Operations, Americas, EMEA, APAC" },
-  { value: "50%", label: "Talent Pipeline Expansion", context: "Reduced Time-to-Fill for Critical Roles" },
-  { value: "1,300", label: "DEI Champions Mobilized", context: "Retention Infrastructure Across 16,000+" },
+  { value: "50%", label: "Talent Pipeline Expansion", context: "Applicant Pool Diversity Growth" },
+  { value: "1,300", label: "Employee Champions Mobilized", context: "Talent Infrastructure Across 16,000+" },
   { value: "4%+", label: "Women in Executive Ranks", context: "Leadership Bench Strength Increase" },
   { value: "35%", label: "Diverse Recruitment Lift", context: "Howard University Partnership ROI" },
   { value: "5", label: "Industry Awards", context: "Including Microsoft DEI Champion of the Year" },
@@ -39,7 +39,7 @@ const METRICS_ROW2 = [
 
 const EXPERTISE = [
   { title: "Workforce Analytics & Predictive Modeling", desc: "Using workforce data to predict attrition risk, quantify retention economics, and identify performance patterns before they impact the P&L.", icon: "◆" },
-  { title: "Culture Transformation at Scale", desc: "Building measurable culture programs from zero to center of excellence with defensible ROI tied directly to margin protection and talent retention.", icon: "◇" },
+  { title: "People Operations Infrastructure at Scale", desc: "Building talent functions from zero to center of excellence with defensible ROI, including ERGs, champion networks, measurement frameworks, and regional operating models.", icon: "◇" },
   { title: "Enterprise Digital Delivery", desc: "25+ years leading $20MM+ technology transformations for Fortune 1000 brands, delivering cost reduction, productivity improvement, and revenue growth.", icon: "▣" },
   { title: "Talent System Architecture", desc: "Designing fair, transparent talent systems that accelerate promotion velocity, reduce time-to-fill for critical roles, and connect people investments to financial outcomes.", icon: "△" },
   { title: "AI Workforce Readiness", desc: "Helping organizations prepare their workforce for AI driven disruption by identifying which roles require human judgment, which tasks can be automated, and how to retool teams for maximum value creation while preserving institutional knowledge.", icon: "○" },
@@ -64,7 +64,7 @@ const AWARDS = [
 ];
 
 const TIMELINE = [
-  { period: "2020 to Present", role: "Global Chief Culture Officer", org: "Merkle / Dentsu", highlight: "Built global talent center of excellence from zero. $12MM budget over five years. 16,000+ employees across Americas, EMEA, and APAC. Reduced attrition cost exposure and increased leadership bench strength." },
+  { period: "2020 to Present", role: "Global Chief Culture Officer", org: "Merkle / Dentsu", highlight: "Built global people operations function from zero. $12MM budget over five years. 16,000+ employees across Americas, EMEA, and APAC. Established workforce analytics frameworks, talent development programs, and regional operating models." },
   { period: "2011 to 2020", role: "Senior Director & Delivery Engagement Leader", org: "Merkle", highlight: "Led $20MM+ in digital transformations. Improved profit margins 20%, reduced delivery costs 10%, recovered 18% revenue growth. 4 promotions in tenure." },
   { period: "2007 to 2011", role: "Associate Program Manager", org: "Merkle", highlight: "Transformed underperforming $250M P&G marketing platform. Grew revenue 18%, profitability 27%. Reduced system downtime from 18 hours to 4 to 6 hours." },
   { period: "2000 to 2007", role: "Manager & Senior Consultant", org: "Capgemini Ernst & Young", highlight: "Led engagements valued up to $30M across telecom, media, entertainment, and health sciences. 2 promotions based on top line financial performance." },
@@ -115,7 +115,7 @@ function Navigation({ active, onNav }) {
       if (sy) window.scrollTo(0, parseInt(sy) * -1);
     }
   }, [open]);
-  const links = ["Home", "About", "Impact", "Expertise", "Case Study", "Thought Leadership", "Resume", "Governance", "Contact"];
+  const links = ["Home", "About", "Impact", "Expertise", "Publications", "Contact"];
   return (
     <>
     <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, padding: scrolled ? "10px 40px" : "18px 40px", background: scrolled ? "rgba(13,17,23,0.96)" : "rgba(13,17,23,0.85)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderBottom: scrolled ? `1px solid ${B.slate}33` : "none", transition: "all 0.4s cubic-bezier(0.22,1,0.36,1)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -154,22 +154,22 @@ function Hero() {
           <div style={{ width: on ? "50px" : "0px", height: "2px", background: B.gold, marginBottom: "28px", transition: t(0.4) }} />
 
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", color: B.gold, marginBottom: "8px", opacity: on ? 1 : 0, transition: t(0.6) }}>
-            Operator Turned Workforce Strategist
+            People Operations & Talent Strategy Executive
           </p>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", letterSpacing: "0.08em", color: B.steel, marginBottom: "20px", opacity: on ? 1 : 0, transition: t(0.65) }}>
-            Talent Analytics · Workforce Strategy · Culture Transformation · AI Workforce Readiness
+            People Operations · Workforce Analytics · Talent Systems · Professional Services
           </p>
 
           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(38px, 5.5vw, 68px)", fontWeight: 300, lineHeight: 1.08, color: B.ivory, marginBottom: "28px", opacity: on ? 1 : 0, transform: on ? "translateY(0)" : "translateY(20px)", transition: t(0.8) }}>
-            I turn workforce data into
+            I build the talent infrastructure that
             <br />
-            <span style={{ color: B.gold, fontStyle: "italic" }}>competitive advantage.</span>
+            <span style={{ color: B.gold, fontStyle: "italic" }}>scaling organizations need.</span>
           </h1>
 
           {/* 3-line executive summary */}
           <div style={{ borderLeft: `2px solid ${B.gold}44`, paddingLeft: "20px", marginBottom: "40px", opacity: on ? 1 : 0, transition: t(1.0) }}>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "16px", lineHeight: 1.75, color: B.silver }}>
-              Enterprise performance strategist with 25+ years in technology delivery and people strategy. I build talent systems that reduce attrition cost, accelerate promotion velocity, and protect margins. Fortune 1000 track record across $20MM+ in transformations. From $250M platform turnarounds at P&G to building enterprise talent systems from zero, I operate where technology delivery meets workforce performance, helping organizations navigate AI disruption while protecting and optimizing human capital.
+              People operations executive with 25+ years bridging enterprise technology delivery and global people strategy in professional services. I build workforce analytics infrastructure, scalable talent programs, and operational systems for organizations that are growing faster than their people function can support. At Merkle (16,000 employees, professional services), I created the first global people function from zero: $12MM budget, three regions, 11 Employee Resource Groups, and measurement frameworks that connected every talent investment to a financial outcome.
             </p>
           </div>
 
@@ -213,7 +213,7 @@ function Hero() {
           }}>
             <img
               src="/headshot.jpg"
-              alt="Kirt Morris, Enterprise Performance Strategist"
+              alt="Kirt Morris, People Operations and Talent Strategy Executive"
               style={{
                 width: "100%",
                 height: "100%",
@@ -246,7 +246,7 @@ function About() {
         <FadeIn><SectionLabel text="About" /></FadeIn>
         <FadeIn delay={100}>
           <SectionHeading>
-            An enterprise performance strategist who uses workforce systems as <span style={{ fontStyle: "italic", color: B.goldDark }}>financial leverage</span>.
+            A people operations executive who builds talent infrastructure from <span style={{ fontStyle: "italic", color: B.goldDark }}>the ground up</span>.
           </SectionHeading>
         </FadeIn>
 
@@ -254,10 +254,10 @@ function About() {
           <FadeIn delay={200}>
             <div>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
-                Most people leaders come from HR. I came from the engine room. For 20 years, I managed complex technology programs for brands like Procter & Gamble, Canon, Under Armour, and Lowe's. I learned where decisions stall, where talent breaks, and where margin leaks hide in workforce data that nobody is reading.
+                Most people leaders come from HR. I came from enterprise technology delivery. For 20 years, I led data management and platform implementations for Fortune 1000 clients at Capgemini Ernst & Young and Merkle, managing programs valued at up to $20M. I learned where decisions stall, where talent gaps show up in the data, and where workforce investments fail to produce returns.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
-                When I transitioned to lead Merkle's global culture function, I brought operational discipline with me. I built a center of excellence serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. But more importantly, I connected every talent initiative to a financial outcome: reduced attrition cost exposure, accelerated promotion velocity, expanded leadership bench strength, and measurable retention economics. Now I'm bringing that same operational discipline to organizations ready to treat workforce strategy as a financial lever, not an HR initiative.
+                When I moved into people leadership at Merkle, I brought that implementation discipline with me. I built the first global people function from zero, serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. I stood up 11 Employee Resource Groups, a 1,300-person champion network, workforce analytics frameworks using Workday, and development programs that produced three internal promotions within six months. I am focused on VP/SVP people operations roles at mid-market and larger professional services firms that are scaling and need someone to build the talent infrastructure that matches their growth.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
                 Every company I speak with is wrestling with the same question: how do we leverage the power of AI while retaining and developing the people who matter most? Most HR professionals lack the technical fluency to answer that question. Most technologists lack the people sensitivity. I bring both, along with quantitative frameworks that translate workforce investments into language the CFO respects and the CHRO can execute.
@@ -298,10 +298,10 @@ function About() {
 
 function TargetRoles() {
   const roles = [
-    "SVP, Talent Strategy & AI Workforce Readiness",
-    "Head of People Analytics & Workforce Strategy",
-    "Chief Culture & Talent Strategy Officer",
-    "SVP, Talent Strategy & Workforce Analytics",
+    "VP / SVP, People Operations",
+    "VP / SVP, Talent Strategy & People Operations",
+    "Head of People Operations & Workforce Analytics",
+    "Chief People Officer (Mid-Market Professional Services)",
   ];
   return (
     <section style={{ padding: "56px 40px", background: B.midnight, borderTop: `1px solid ${B.slate}22`, borderBottom: `1px solid ${B.slate}22` }}>
@@ -422,7 +422,7 @@ function CaseStudy() {
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "0px" }}>
           {[
-            { label: "Before", color: `${B.slate}11`, text: "Merkle had no formal DEI function, no measurement framework, no dedicated budget, and no global coordination across 16,000+ employees in three regions. Talent representation was stagnant. Leadership bench strength was weak in diversity. There was no infrastructure to connect people strategy to business outcomes." },
+            { label: "Before", color: `${B.slate}11`, text: "Merkle had no formal people operations infrastructure for talent development, no measurement framework, no dedicated budget, and no global coordination across 16,000+ employees in three regions. Talent representation was stagnant. Leadership bench strength was weak in diversity. There was no infrastructure to connect people strategy to business outcomes." },
             { label: "Problem", color: `${B.slate}08`, text: "The CEO needed a center of excellence that could operate at enterprise scale, produce measurable financial and talent outcomes, and withstand scrutiny from the CFO and external stakeholders. This was not a communications exercise. It was an operational build that required budget management, vendor selection, technology integration, cross-regional governance, and executive stakeholder alignment." },
             { label: "Action", color: `${B.slate}11`, text: "I recruited a team of six professionals across three regions within 12 months and built the function from the ground up. I secured and managed a $12MM budget over five years, established 11 Employee Resource Groups with 1,300 champions, created systematic measurement frameworks using Workday and workforce analytics that enabled quarterly reporting to the CEO and CFO on retention economics, promotion velocity, and talent pipeline ROI, launched the LIFT leadership program, formed Merkle's first Howard University partnership, and embedded inclusive hiring practices with the first Inclusive Hiring Manager." },
             { label: "Result", color: `${B.slate}08`, text: "50% increase in diverse talent pipeline. 4% rise in women executives. 7% growth in underrepresented talent. 35% boost in diverse recruitment via Howard University. Three internal promotions in six months through LIFT. Employee Pulse scores improved from 3.0 to 4.1. Five industry awards including Microsoft DEI Champion of the Year. Published thought leadership in Quartz, Digiday, and Afrotech. The function became a model referenced by Dentsu's global leadership." },
@@ -640,7 +640,7 @@ function ExecutiveCTA() {
         </FadeIn>
         <FadeIn delay={200}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.7, color: B.steel, marginBottom: "36px" }}>
-            I engage selectively with organizations where workforce strategy, talent systems, or culture transformation are treated as competitive levers, or where AI driven workforce transformation requires a leader who understands both the technology and the humans behind it. If that describes your challenge, I welcome the conversation.
+            I am focused on VP/SVP people operations and talent strategy roles at mid-market and larger professional services firms navigating growth, transformation, or organizational scale. If your organization is building the talent infrastructure to match its growth ambitions, I welcome the conversation.
           </p>
         </FadeIn>
         <FadeIn delay={300}>
