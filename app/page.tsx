@@ -64,7 +64,7 @@ const AWARDS = [
 ];
 
 const TIMELINE = [
-  { period: "2020 to Present", role: "Global Chief Culture Officer", org: "Merkle / Dentsu", highlight: "Built global DEI operations function from zero. $12MM budget over five years. 16,000+ employees across Americas, EMEA, and APAC. Established workforce analytics frameworks, talent development programs, and regional operating models." },
+  { period: "2020 to Present", role: "Global Chief Culture Officer", org: "Merkle / Dentsu", highlight: "Built global people operations function from zero. $12MM budget over five years. 16,000+ employees across Americas, EMEA, and APAC. Established workforce analytics frameworks, talent development programs, and regional operating models." },
   { period: "2011 to 2020", role: "Senior Director & Delivery Engagement Leader", org: "Merkle", highlight: "Led $20MM+ in digital transformations. Improved profit margins 20%, reduced delivery costs 10%, recovered 18% revenue growth. 4 promotions in tenure." },
   { period: "2007 to 2011", role: "Associate Program Manager", org: "Merkle", highlight: "Transformed underperforming $250M P&G marketing platform. Grew revenue 18%, profitability 27%. Reduced system downtime from 18 hours to 4 to 6 hours." },
   { period: "2000 to 2007", role: "Manager & Senior Consultant", org: "Capgemini Ernst & Young", highlight: "Led engagements valued up to $30M across telecom, media, entertainment, and health sciences. 2 promotions based on top line financial performance." },
@@ -169,7 +169,7 @@ function Hero() {
           {/* 3-line executive summary */}
           <div style={{ borderLeft: `2px solid ${B.gold}44`, paddingLeft: "20px", marginBottom: "40px", opacity: on ? 1 : 0, transition: t(1.0) }}>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "16px", lineHeight: 1.75, color: B.silver }}>
-              People operations executive with 25+ years bridging enterprise technology delivery and global people strategy in professional services. I build workforce analytics infrastructure, scalable talent programs, and operational systems for organizations that are growing faster than their people function can support. At Merkle (16,000 employees, professional services), I created the first global DEI people function from zero: $12MM budget, three regions, 11 Employee Resource Groups, and measurement frameworks that connected every talent investment to a financial outcome.
+              People operations executive with 25+ years bridging enterprise technology delivery and global people strategy in professional services. I build workforce analytics infrastructure, scalable talent programs, and operational systems for organizations that are growing faster than their people function can support. At Merkle (16,000 employees, professional services), I created the first global people function from zero: $12MM budget, three regions, 11 Employee Resource Groups, and measurement frameworks that connected every talent investment to a financial outcome.
             </p>
           </div>
 
@@ -257,7 +257,7 @@ function About() {
                 Most people leaders come from HR. I came from enterprise technology delivery. For 20 years, I led data management and platform implementations for Fortune 1000 clients at Capgemini Ernst & Young and Merkle, managing programs valued at up to $20M. I learned where decisions stall, where talent gaps show up in the data, and where workforce investments fail to produce returns.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
-                When I moved into people leadership at Merkle, I brought that implementation discipline with me. I built the first global DEI people function from zero, serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. I stood up 11 Employee Resource Groups, a 1,300-person champion network, workforce analytics frameworks using Workday, and development programs that produced three internal promotions within six months. I am focused on VP/SVP people operations roles at mid-market and larger professional services firms that are scaling and need someone to build the talent infrastructure that matches their growth.
+                When I moved into people leadership at Merkle, I brought that implementation discipline with me. I built the first global people function from zero, serving 16,000+ employees across the Americas, EMEA, and APAC with a $12MM budget over five years. I stood up 11 Employee Resource Groups, a 1,300-person champion network, workforce analytics frameworks using Workday, and development programs that produced three internal promotions within six months. I am focused on VP/SVP people operations roles at mid-market and larger professional services firms that are scaling and need someone to build the talent infrastructure that matches their growth.
               </p>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", lineHeight: 1.8, color: B.slate, marginBottom: "22px" }}>
                 Every company I speak with is wrestling with the same question: how do we leverage the power of AI while retaining and developing the people who matter most? Most HR professionals lack the technical fluency to answer that question. Most technologists lack the people sensitivity. I bring both, along with quantitative frameworks that translate workforce investments into language the CFO respects and the CHRO can execute.
@@ -448,9 +448,9 @@ function CaseStudy() {
 
 function ThoughtLeadership() {
   return (
-    <section id="Thought Leadership" style={{ padding: "100px 40px", background: B.cream }}>
+    <section id="Publications" style={{ padding: "100px 40px", background: B.cream }}>
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-        <FadeIn><SectionLabel text="Thought Leadership" /></FadeIn>
+        <FadeIn><SectionLabel text="Publications" /></FadeIn>
         <FadeIn delay={100}>
           <SectionHeading>Published perspectives on <span style={{ fontStyle: "italic", color: B.goldDark }}>the future of work</span>.</SectionHeading>
         </FadeIn>
@@ -743,7 +743,7 @@ export default function KirtMorrisSite() {
   };
 
   useEffect(() => {
-    const secs = ["Home", "About", "Impact", "Expertise", "Case Study", "Thought Leadership", "Resume", "Governance", "Connect", "Contact"];
+    const secs = ["Home", "About", "Impact", "Expertise", "Publications", "Contact", "Connect"];
     const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }); }, { threshold: 0.25 });
     secs.forEach(s => { const el = document.getElementById(s); if (el) obs.observe(el); });
     return () => obs.disconnect();
