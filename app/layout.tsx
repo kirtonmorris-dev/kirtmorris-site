@@ -4,15 +4,15 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "Kirt Morris | Operator Turned Workforce Strategist",
+  title: "Kirt Morris | People Operations & Talent Strategy Executive",
   description:
-    "Enterprise performance strategist with 25+ years bridging technology delivery and people strategy for Fortune 1000 organizations.",
+    "People operations executive with 25+ years bridging enterprise technology delivery and global people strategy in professional services. Building workforce analytics, talent systems, and operational infrastructure at scale.",
   keywords:
-    "Kirt Morris, Head of People Analytics, Workforce Strategy, Chief People Officer, Talent Analytics, Culture Transformation",
+    "Kirt Morris, People Operations, Talent Strategy, Workforce Analytics, Professional Services, VP People Operations, HRIS, Workday, Organizational Design, Talent Systems",
   openGraph: {
-    title: "Kirt Morris | Operator Turned Workforce Strategist",
+    title: "Kirt Morris | People Operations & Talent Strategy Executive",
     description:
-      "I turn workforce data into competitive advantage. 25+ years bridging technology delivery and people strategy.",
+      "I build the talent infrastructure that scaling professional services firms need. 25+ years bridging enterprise technology delivery and global people strategy.",
     type: "website",
   },
 };
